@@ -62,6 +62,10 @@ NSString *const HTTPResponseErrorDomain = @"HTTPResponseErrorDomain";
 
 @implementation RQOperation
 
+@synthesize executing = _executing;
+@synthesize finished = _finished;
+@synthesize cancelled = _cancelled;
+
 + (instancetype)operationWithRequest:(NSURLRequest *)request
 {
     return [[self alloc] initWithRequest:request];
