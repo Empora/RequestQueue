@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = 'RequestQueue'
-  s.version        = ‘1.5.4’
+  s.version        = '1.5.4'
   s.license        = 'zlib'
   s.summary        = 'RequestQueue is a simple class for managing multiple concurrent asynchronous URL requests in your applications.'
   s.homepage       = 'https://github.com/nicklockwood/RequestQueue.git'
