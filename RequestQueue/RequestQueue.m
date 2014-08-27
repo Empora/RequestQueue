@@ -124,7 +124,10 @@ NSString *const HTTPResponseErrorDomain = @"HTTPResponseErrorDomain";
 {
     @synchronized (self)
     {
-        if (self.executing && !self.finished)
+        //if (self.executing && !self.finished)
+        // Removed self.executing check, because there seems to be a race condition where requests can be cancelled before being executed.
+        // Then finishing would not be possible anymore
+        if (!self.finished)
         {
             [self willChangeValueForKey:@"isExecuting"];
             [self willChangeValueForKey:@"isFinished"];
